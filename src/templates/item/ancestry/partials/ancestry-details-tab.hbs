@@ -1,0 +1,7 @@
+{{#with (lookup tabsMap "details") as |tab|}}
+<div class="tab tab-content {{tab.cssClass}}" data-tab="details" data-group="primary">
+    <prose-mirror name="system.description.value" data-document-u-u-i-d="{{@root.item.uuid}}" value="{{@root.item.system.description.value}}" toggled="true">
+        {{{@root.descHtml}}}
+    </prose-mirror>
+</div>
+{{/with}}

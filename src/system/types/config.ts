@@ -28,6 +28,7 @@ import {
     HoldType,
     EquipHand,
     PathType,
+    GenericFieldCategories,
 } from './cosmere';
 
 export interface SizeConfig {
@@ -175,6 +176,11 @@ export interface ItemTypeConfig {
     desc_placeholder?: string;
 }
 
+export interface ItemFieldConfig {
+    label: string;
+    labelPlural?: string;
+}
+
 export interface EquipTypeConfig {
     label: string;
 }
@@ -205,6 +211,7 @@ export interface CosmereRPGConfig {
 
     items: {
         types: Record<ItemType, ItemTypeConfig>;
+        generic: Record<GenericFieldCategories, ItemFieldConfig>;
         activation: {
             types: Record<ActivationType, ActivationTypeConfig>;
             consumeTypes: Record<ItemConsumeType, ItemConsumeTypeConfig>;

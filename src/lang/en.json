@@ -280,6 +280,14 @@
                     "label_plural": "Connections"
                 }
             },
+            "Generic": {
+                "Details": {
+                    "label": "Details"
+                },
+                "Effects": {
+                    "label": "Effects"
+                }
+            },
             "Weapon": {
                 "Type": {
                     "Light": "Light",

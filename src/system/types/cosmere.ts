@@ -261,6 +261,11 @@ export const enum ItemType {
     Connection = 'connection',
 }
 
+export const enum GenericFieldCategories {
+    Details = 'details',
+    Effects = 'effects',
+}
+
 export const enum TurnSpeed {
     Fast = 'fast',
     Slow = 'slow',

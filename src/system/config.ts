@@ -29,6 +29,7 @@ import {
     HoldType,
     PathType,
     EquipHand,
+    GenericFieldCategories,
 } from './types/cosmere';
 
 const COSMERE: CosmereRPGConfig = {
@@ -358,7 +359,7 @@ const COSMERE: CosmereRPGConfig = {
             [ItemType.Ancestry]: {
                 label: 'COSMERE.Item.Type.Ancestry.label',
                 labelPlural: 'COSMERE.Item.Type.Ancestry.label_plural',
-                desc_placeholder: 'COSEMERE.Item.Type.Ancestry.desc_placeholer',
+                desc_placeholder: 'COSMERE.Item.Type.Ancestry.desc_placeholder',
             },
             [ItemType.Path]: {
                 label: 'COSMERE.Item.Type.Path.label',
@@ -383,6 +384,14 @@ const COSMERE: CosmereRPGConfig = {
             [ItemType.Connection]: {
                 label: 'COSMERE.Item.Type.Connection.label',
                 labelPlural: 'COSMERE.Item.Type.Connection.label_plural',
+            },
+        },
+        generic: {
+            [GenericFieldCategories.Details]: {
+                label: 'COSMERE.Item.Generic.Detail.label',
+            },
+            [GenericFieldCategories.Effects]: {
+                label: 'COSMERE.Item.Generic.Effect.label',
             },
         },
         activation: {

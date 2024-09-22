@@ -10,6 +10,8 @@ export interface DescriptionItemData {
 
 export interface InitialDescriptionItemValues {
     value: string;
+    short?: string;
+    chat?: string;
 }
 
 export function DescriptionItemMixin<P extends CosmereItem>(
@@ -24,12 +26,15 @@ export function DescriptionItemMixin<P extends CosmereItem>(
                     description: new foundry.data.fields.SchemaField({
                         value: new foundry.data.fields.HTMLField({
                             label: 'Description',
-                            initial: params?.value ? params.value : undefined,
+                            initial: params?.value ? params.value : '',
                         }),
                         chat: new foundry.data.fields.HTMLField({
                             label: 'Chat description',
+                            initial: params?.chat ? params.chat : '',
                         }),
-                        short: new foundry.data.fields.StringField(),
+                        short: new foundry.data.fields.StringField({
+                            initial: params?.short ? params.short : '',
+                        }),
                     }),
                 });
             }

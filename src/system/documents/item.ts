@@ -14,6 +14,7 @@ import {
     ArmorItemDataModel,
     PathItemDataModel,
     ConnectionItemDataModel,
+    AncestryItemDataModel,
 } from '@system/data/item';
 
 import { ActivatableItemData } from '@system/data/item/mixins/activatable';
@@ -28,6 +29,8 @@ import { DescriptionItemData } from '@system/data/item/mixins/description';
 import { Derived } from '@system/data/fields';
 
 import { d20Roll, D20Roll, D20RollData } from '@system/dice';
+
+export type AncestryItem = CosmereItem<AncestryItemDataModel>;
 
 // Constants
 const CONSUME_CONFIGURATION_DIALOG_TEMPLATE =

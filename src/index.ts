@@ -54,10 +54,15 @@ Hooks.once('init', async () => {
         },
     );
 
-    Items.registerSheet('cosmere-rpg', applications.item.AncestrySheet, {
-        types: ['ancestry'],
-        label: `${game.i18n?.localize('COSMERE.Item.Type.Ancestry.label')}`,
-    });
+    Items.registerSheet(
+        'cosmere-rpg',
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-argument
+        applications.item.AncestrySheet as any,
+        {
+            types: ['ancestry'],
+            label: `${game.i18n?.localize('COSMERE.Item.Type.Ancestry.label')}`,
+        },
+    );
 
     CONFIG.Dice.types.push(dice.PlotDie);
     CONFIG.Dice.terms.p = dice.PlotDie;

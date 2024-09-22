@@ -6,7 +6,6 @@ import {
     ComponentHandlebarsApplicationMixin,
     ComponentHandlebarsRenderOptions,
 } from '../mixins';
-import { TabsApplicationMixin } from './mixins/tabs';
 
 // Components
 import {
@@ -29,6 +28,7 @@ import {
 // Base
 import { BaseActorSheet } from './base';
 import { AnyObject } from '@src/system/types/utils';
+import { TabsApplicationMixin } from './mixins/tabs';
 
 const enum CharacterSheetTab {
     Details = 'details',
@@ -251,7 +251,6 @@ export class CharacterSheet extends TabsApplicationMixin(
                 paths: pathItems.filter((i) => i.system.type === type),
             })),
 
-            // TODO: Default localization
             ancestryLabel:
                 ancestryItem?.name ??
                 game.i18n?.localize('COSMERE.Item.Type.Ancestry.label'),
